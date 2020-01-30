@@ -7,7 +7,7 @@
                          "sidebar  main";
     grid-template-rows: 90px 1fr;
     grid-template-columns: 250px 1fr;
-    background-image: url("../../videoblocks-close-up-of-young-plant-growing-from-soil-background-low-angle-view_hje3yc6dkg_thumbnail-full01.png");
+    background-image: url("./videoblocks-close-up-of-young-plant-growing-from-soil-background-low-angle-view_hje3yc6dkg_thumbnail-full01.png");
   }
   
   #page > header {
@@ -17,7 +17,6 @@
     color: whitesmoke;
     font-family: 'Indie Flower', cursive;
     border-style: solid;
-   
   }
   
   #page > sidebar {
@@ -32,4 +31,54 @@
     font-family: 'Indie Flower', cursive;
     color: whitesmoke;
     border-style: solid;
+  }
+
+  #submit{
+    float: right;
+    background-color: white;
+    border: 2px solid green;
+    padding: 9px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(85, 177, 85);
+  }
+  #submit:hover{
+    background-color: green;
+    color: white;
+  }
+
+  #city-search{
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+  }
+  #city-search[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 14px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  #city-search[type=text]:focus {
+    width: 50%;
+    background-color: rgb(85, 177, 85);
+    border: 2px solid black;
+  }
+
+  ::-webkit-input-placeholder {
+    font-family: 'Indie Flower', cursive;
+    color: black;
   }
