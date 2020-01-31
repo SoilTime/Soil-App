@@ -82,3 +82,22 @@
     font-family: 'Indie Flower', cursive;
     color: black;
   }
+  
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 7s linear alternate forwards;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  svg{
+    margin-right: 50px;
+    margin-top: -25px;
+  }
+  .hidden-svg{
+    display:none;
+  }
