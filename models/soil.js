@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes){
         },
         Study_number: {
             type: DataTypes.INTEGER,
-            defaultValue: NULL
+            defaultValue: null
         },
         Author: {
             type: DataTypes.STRING
@@ -35,19 +35,19 @@ module.exports = function(sequelize, DataTypes){
         },
         Study_midyear: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         YearsOfData: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Latitude: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Longitude: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Elevation: {
             type: DataTypes.STRING,
@@ -63,7 +63,7 @@ module.exports = function(sequelize, DataTypes){
         },
         Age_disturbance: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Species: {
             type: DataTypes.STRING
@@ -106,11 +106,11 @@ module.exports = function(sequelize, DataTypes){
         },
         MAT: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         MAP: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         PET: {
             type: DataTypes.STRING
@@ -126,14 +126,14 @@ module.exports = function(sequelize, DataTypes){
         },
         Annual_coverage: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Partition_method: {
             type: DataTypes.STRING
         },
         Rs_annual: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Rs_annual_err: {
             type: DataTypes.STRING
@@ -158,15 +158,15 @@ module.exports = function(sequelize, DataTypes){
         },
         Ra_annual: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Rh_annual: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         RC_annual: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Rs_spring: {
             type: DataTypes.STRING
@@ -182,7 +182,7 @@ module.exports = function(sequelize, DataTypes){
         },
         Rs_growingseason: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL  
+            defaultValue: null  
         },
         Rs_wet: {
             type: DataTypes.STRING
@@ -203,43 +203,43 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         Model_output_units: {
-            type: DataTypes
+            type: DataTypes.STRING
         },
         Model_temp_min: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_temp_max: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_N: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_R2: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         T_depth: {
             type: DataTypes.STRING,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_paramA: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_paramB: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_paramC: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_paramD: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Model_paramE: {
             type: DataTypes.STRING
@@ -249,7 +249,7 @@ module.exports = function(sequelize, DataTypes){
         },
         R10: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Q10_0_10: {
             type: DataTypes.STRING  
@@ -268,22 +268,22 @@ module.exports = function(sequelize, DataTypes){
         },
         Q10_other1_temp_min: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Q10_other1_temp_max: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Q10_other2: {
             type: DataTypes.STRING
         },
         Q10_other2_temp_min: {
             type: DataTypes.INTEGER,
-            defaultValue: NULL
+            defaultValue: null
         },
         Q10_other2_temp_max: {
             type: DataTypes.INTEGER,
-            defaultValue: NULL
+            defaultValue: null
         },
         GPP: {
             type: DataTypes.STRING
@@ -293,69 +293,69 @@ module.exports = function(sequelize, DataTypes){
         },
         NEP: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         NPP: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         ANPP: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         BNPP: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         NPP_FR: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         TBCA: {
             type: DataTypes.STRING
         },
         Litter_flux: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Rootlitter_flux: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         TotDet_flux: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         Ndep: {
             type: DataTypes.STRING
         },
         LAI: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         BA: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         C_veg_total: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         C_AG: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         C_BG: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         C_CR: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         C_FR: {
             type: DataTypes.DOUBLE,
-            defaultValue: NULL
+            defaultValue: null
         },
         C_litter: {
             type: DataTypes.STRING
