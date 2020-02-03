@@ -16,7 +16,7 @@ module.exports = function () {
 
    
 // Route to capture the search input by user
-    router.post("/:search", function (req, res) {
+    router.post("/api/:search", function (req, res) {
         console.log(req.body);
 
         db.Student.create(req.body)
@@ -32,7 +32,7 @@ module.exports = function () {
 
 router.get('/trefle', function (req, res) {
     var trefURLKey = "VjlQT2w5L3puRTRJY1JJZ3BETEpPUT09"
-    var plant = "spinach"
+    // var plant = "spinach"
     axios
     .get(`https://trefle.io/api/plants?q=${plant}&token=${trefURLKey}`)
     .then(function(res) {
