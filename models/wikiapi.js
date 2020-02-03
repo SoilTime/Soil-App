@@ -1,18 +1,11 @@
 var axios = require("axios");
 
 var loginUrl = "https://www.mediawiki.org/w/api.php?action=login&lgname=Jsegel12@Project1&lgpassword=n8mqe7fg3ql50genu5iaskushljgicjf&lgtoken=123ABC";
-    $.ajax({
-        url: loginUrl,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
-    });
-
-axios
+ axios
     .get(loginUrl)
     .then(function(res){
         console.log(res)
-    }))    
+    })    
 
     var var2 = queryTerm;
     var2 = var2.toLowerCase()
