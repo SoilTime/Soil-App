@@ -4,21 +4,18 @@
 // Making ajax call to the trefle api route to get the  plant info and adding on click event listener
 $(document).ready(function () {
 
-
-
-
     $("#map").hide();
     $("#submit").on("click", coordinateAddress);
 
     function coordinateAddress() {
-        console.log("working");
+        // console.log("working");
         geocoder = new google.maps.Geocoder();
         var address = $("#city-search").val();
         console.log("codeAddress -->" + address);
         geocoder.geocode({ 'address': address }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                var lat_new = results[0].geometry.location.lat().toFixed(6);
-                var lng_new = results[0].geometry.location.lng().toFixed(6);
+                var lat_new = results[0].geometry.location.lat().toFixed(2);
+                var lng_new = results[0].geometry.location.lng().toFixed(2);
                 var obj = { lat: parseFloat(lat_new), lng: parseFloat(lng_new) };
                 // $("#lat").text(obj.lat);
                 // $("#lng").text(obj.lng);
@@ -33,8 +30,7 @@ $(document).ready(function () {
 
     function initMap(obj) {
         $("#map").show();
-        console.log(obj);
-
+        // console.log(obj);
         var map;
         var city = $("#city-search").val();
 
@@ -45,7 +41,7 @@ $(document).ready(function () {
         });
 
         geocoder.geocode({ 'address': city }, function (results, status) {
-            console.log(city);
+            // console.log(city);
             // console.log(results);
             if (status === 'OK') {
                 map.setCenter(results[0].geometry.location);
@@ -65,8 +61,8 @@ $(document).ready(function () {
                 // $("#lat").text(marker.position.lat().toFixed(6));
                 // $("#lng").text(marker.position.lng().toFixed(6));
 
-                obj.lat = parseFloat(marker.position.lat().toFixed(6));
-                obj.lng = parseFloat(marker.position.lng().toFixed(6));
+                obj.lat = parseFloat(marker.position.lat().toFixed(2));
+                obj.lng = parseFloat(marker.position.lng().toFixed(2));
                 // $("#lat").text(obj.lat);
                 // $("#lng").text(obj.lng);
                 console.log(obj);
