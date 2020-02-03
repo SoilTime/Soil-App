@@ -21,6 +21,7 @@ $(document).ready(function () {
                 // $("#lng").text(obj.lng);
                 console.log(obj);
                 initMap(obj);
+                sendCoord(obj)
             }
             else {
                 // Get the modal
@@ -90,5 +91,15 @@ $(document).ready(function () {
 
             }
         );
-    }
+    };
+    function sendCoord(data) {
+        $.ajax({
+            url: "#",
+            method: "GET",
+            data: data
+        }).then(function (response) {
+            console.log("SENT")
+            console.log(data)
+        })
+    };
 })
