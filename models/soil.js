@@ -364,10 +364,10 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         C_soildepth: {
-            type: DataTypes.STRING
+            type: DataTypes.TEXT
         },
         Notes: {
-            type: DataTypes.STRING
+            type: DataTypes.TEXT
         }
     });
     return Soil;

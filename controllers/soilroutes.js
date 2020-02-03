@@ -4,13 +4,18 @@ var db = require("../models");
 var axios = require("axios")
 
 
-module.exports = function () {
+module.exports = function (router) {
     // Home route to render the index html file
     router.get('/', function (req, res) {
         res.render('index', {});
     });
 // Route to render the result page after search
-    router.get('/', function (req, res) {
+    router.get('/soil', function (req, res) {
+        db.Soil.findAll({
+            where: {
+               
+            }
+        })
         res.render('soil', {soil: data});
     });
 
@@ -21,7 +26,7 @@ module.exports = function () {
 
         db.Student.create(req.body)
             .then(function (data) {
-                console.log("added in database");
+                // console.log("added in database");
                 res.json(data)
             })
     });
@@ -30,19 +35,15 @@ module.exports = function () {
 
 
 
-router.get('/trefle', function (req, res) {
+router.get('/trefle/:plant', function (req, res) {
     var trefURLKey = "VjlQT2w5L3puRTRJY1JJZ3BETEpPUT09"
     // var plant = "spinach"
     axios
-    .get(`https://trefle.io/api/plants?q=${plant}&token=${trefURLKey}`)
+    .get(`https://trefle.io/api/plants?q=${req.params.plant}&token=${trefURLKey}`)
     .then(function(res) {
-        
-        
         console.log(res.data)
-        
-        
     })
-    
+
     res.render('soil', {plant: data});
     });
     
