@@ -2,7 +2,7 @@ const express = require("express");
 var db = require("./models")
 var soilController = require("./controllers/soilroutes")
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8086;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 var exphbs = require("express-handlebars");
