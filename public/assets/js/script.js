@@ -55,8 +55,6 @@ $(document).ready(function () {
         });
 
         var marker = new google.maps.Marker({ position: obj, map: map, draggable: true });
-        console.log("lat_new --> " + lat_new);
-        console.log("lng_new --> " + lng_new);
         console.log(obj);
 
         google.maps.event.addListener(

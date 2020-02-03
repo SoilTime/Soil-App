@@ -141,6 +141,12 @@
   transform-origin: 250px 80px;
   opacity: 0;
 }
+
+#map {
+  height: 400px;
+  width: 400px;
+}
+
 @keyframes grow {
   100% {opacity: 1}
   from {
