@@ -4,9 +4,8 @@
 // Making ajax call to the trefle api route to get the  plant info and adding on click event listener
 $(document).ready(function () {
 
-    var lat_new = 0;
-    var lng_new = 0;
-    var obj = {};
+
+
 
     $("#map").hide();
     $("#submit").on("click", coordinateAddress);
@@ -14,16 +13,17 @@ $(document).ready(function () {
     function coordinateAddress() {
         console.log("working");
         geocoder = new google.maps.Geocoder();
-        var address = $("city-search").val();
+        var address = $("#city-search").val();
         console.log("codeAddress -->" + address);
         geocoder.geocode({ 'address': address }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                lat_new = results[0].geometry.location.lat().toFixed(6);
-                lng_new = results[0].geometry.location.lng().toFixed(6);
-                obj = { lat: parseFloat(lat_new), lng: parseFloat(lng_new) };
+                var lat_new = results[0].geometry.location.lat().toFixed(6);
+                var lng_new = results[0].geometry.location.lng().toFixed(6);
+                var obj = { lat: parseFloat(lat_new), lng: parseFloat(lng_new) };
                 // $("#lat").text(obj.lat);
                 // $("#lng").text(obj.lng);
-                initMap();
+                console.log(obj);
+                initMap(obj);
             }
             else {
                 alert("Geocode was not successful for the following reason: " + status);
@@ -31,7 +31,7 @@ $(document).ready(function () {
         });
     }
 
-    function initMap() {
+    function initMap(obj) {
         $("#map").show();
         console.log(obj);
 
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
         var geocoder = new google.maps.Geocoder();
         map = new google.maps.Map($("#map")[0], {
-            center: { lat: 0, lng: 0 },
+            center: { lat: obj.lat, lng: obj.lon },
             zoom: 8
         });
 
