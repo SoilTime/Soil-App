@@ -6,35 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    {{!-- <script src="/assets/js/script.js"></script> --}}
     <title>Soil Time</title>
 </head>
 
 <body>
+
     <section id="page">
-        <header>SoilTime
+        <header>
+            <div id="logo">SoilTime</div>
             <button id="submit">Let's Grow!</button>
             <input id="city-search" type="text" name="city-search" placeholder="Search for a city:">
-            <svg class="hidden-svg" id="vines" version="1.1" viewBox="0.0 0.0 960.0 100.0" fill="none" stroke="none"
-                stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns="http://www.w3.org/2000/svg">
+            <svg id="vines-and-flower" version="1.1" viewBox="30.0 0.0 337.8897637795276 127.38582677165354"
+                height="120px" width="250px" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
                 <clipPath id="p.0">
-                    <path d="m0 0l960.0 0l0 720.0l-960.0 0l0 -720.0z" clip-rule="nonzero" />
+                    <path d="m0 0l337.88977 0l0 127.385826l-337.88977 0l0 -127.385826z" clip-rule="nonzero" />
                 </clipPath>
                 <g clip-path="url(#p.0)">
-                    <path class="path" stroke="#6aa84f" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="butt"
-                        d="m960.3695 2.215223c-19.235046 28.852562 -59.406128 54.93259 -93.04724 46.522312c-22.612488 -5.653126 -59.360962 -25.278135 -69.78479 -4.4304466c-2.579712 5.159397 7.9386597 13.222374 13.293945 11.078739c6.1032715 -2.4430275 13.065063 -6.0825195 15.506592 -12.186352c3.130066 -7.825203 -13.778442 -13.114443 -22.154846 -12.183725c-31.18158 3.464613 -53.74707 34.48269 -84.18378 42.091866c-17.290222 4.3225555 -34.480286 15.112579 -52.060364 12.183723c-17.783142 -2.9626846 -39.35852 -13.67807 -44.309692 -31.013123c-4.5858154 -16.05589 12.426819 -37.712135 28.800537 -40.986874c13.910095 -2.7820215 19.468933 23.14479 33.230957 26.5853c10.244873 2.561222 18.010498 -11.362213 25.477722 -18.829395"
+                    <path class="vine" class="hidden-svg" fill="#000000" fill-opacity="0.0"
+                        d="m0 0l337.88977 0l0 127.385826l-337.88977 0z" fill-rule="evenodd" />
+                    <path class="vine" class="hidden-svg" fill="#000000" fill-opacity="0.0"
+                        d="m-1.4022614 65.19423c12.380703 21.677818 36.089245 41.679314 60.9895 43.46456c23.917393 1.7147827 44.430714 -20.731926 68.34909 -22.433067c17.463928 -1.2420883 32.375916 13.347946 48.719162 19.627296c12.674438 4.869728 31.728882 0.43341064 39.257217 -10.866142c3.4884949 -5.236023 -13.076035 -11.459412 -17.524933 -7.010498c-6.552246 6.552246 -6.2841644 24.606888 2.4540558 27.690285c27.106415 9.564865 53.659683 -21.220932 81.66669 -27.690285c11.54364 -2.666481 32.64026 10.323799 28.391052 21.383202c-4.5130615 11.746185 -29.047394 0.35823822 -36.451447 -9.816277c-8.229126 -11.308327 -7.442444 -34.523697 4.5564575 -41.70866"
+                        fill-rule="evenodd" />
+                    <path class="vine" class="hidden-svg" stroke="#6aa84f" stroke-width="3.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m-1.4022614 65.19423c12.380703 21.677818 36.089245 41.679314 60.9895 43.46456c23.917393 1.7147827 44.430714 -20.731926 68.34909 -22.433067c17.463928 -1.2420883 32.375916 13.347946 48.719162 19.627296c12.674438 4.869728 31.728882 0.43341064 39.257217 -10.866142c3.4884949 -5.236023 -13.076035 -11.459412 -17.524933 -7.010498c-6.552246 6.552246 -6.2841644 24.606888 2.4540558 27.690285c27.106415 9.564865 53.659683 -21.220932 81.66669 -27.690285c11.54364 -2.666481 32.64026 10.323799 28.391052 21.383202c-4.5130615 11.746185 -29.047394 0.35823822 -36.451447 -9.816277c-8.229126 -11.308327 -7.442444 -34.523697 4.5564575 -41.70866"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#e06666"
+                        d="m330.2834 52.072727l0 0c0 -5.2271385 -4.6534424 -9.464569 -10.393707 -9.464569q-5.196869 0 -10.393707 0q0 4.7322845 0 9.464569l0 0c0 5.2271347 4.653412 9.464565 10.393707 9.464565l0 0c5.740265 0 10.393707 -4.2374306 10.393707 -9.464565z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m330.2834 52.072727l0 0c0 -5.2271385 -4.6534424 -9.464569 -10.393707 -9.464569q-5.196869 0 -10.393707 0q0 4.7322845 0 9.464569l0 0c0 5.2271347 4.653412 9.464565 10.393707 9.464565l0 0c5.740265 0 10.393707 -4.2374306 10.393707 -9.464565z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#e06666"
+                        d="m321.1449 11.404855l0 0c-5.7402954 0 -10.393707 4.2374306 -10.393707 9.464566q0 4.7322845 0 9.464567q5.196869 0 10.393707 0l0 0c5.7402954 0 10.393707 -4.2374306 10.393707 -9.464567l0 0c0 -5.2271357 -4.653412 -9.464566 -10.393707 -9.464566z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m321.1449 11.404855l0 0c-5.7402954 0 -10.393707 4.2374306 -10.393707 9.464566q0 4.7322845 0 9.464567q5.196869 0 10.393707 0l0 0c5.7402954 0 10.393707 -4.2374306 10.393707 -9.464567l0 0c0 -5.2271357 -4.653412 -9.464566 -10.393707 -9.464566z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#e06666"
+                        d="m277.6364 21.80122l0 0c0 5.2271366 4.653412 9.464567 10.393707 9.464567q5.1968384 0 10.393677 0q0 -4.7322845 0 -9.464567l0 0c0 -5.2271366 -4.653412 -9.464567 -10.393677 -9.464567l0 0c-5.7402954 0 -10.393707 4.2374306 -10.393707 9.464567z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m277.6364 21.80122l0 0c0 5.2271366 4.653412 9.464567 10.393707 9.464567q5.1968384 0 10.393677 0q0 -4.7322845 0 -9.464567l0 0c0 -5.2271366 -4.653412 -9.464567 -10.393677 -9.464567l0 0c-5.7402954 0 -10.393707 4.2374306 -10.393707 9.464567z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#e06666"
+                        d="m287.89108 62.59194l0 0c5.740265 0 10.393707 -4.2374306 10.393707 -9.464569q0 -4.7322807 0 -9.464565q-5.196869 0 -10.393707 0l0 0c-5.7402954 0 -10.393707 4.2374306 -10.393707 9.464565l0 0c0 5.2271385 4.653412 9.464569 10.393707 9.464569z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m287.89108 62.59194l0 0c5.740265 0 10.393707 -4.2374306 10.393707 -9.464569q0 -4.7322807 0 -9.464565q-5.196869 0 -10.393707 0l0 0c-5.7402954 0 -10.393707 4.2374306 -10.393707 9.464565l0 0c0 5.2271385 4.653412 9.464569 10.393707 9.464569z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#ff0000"
+                        d="m297.3647 7.1233573l0 0c-4.0007935 3.922526 -4.0007935 10.282198 0 14.204723q3.6220398 3.5511818 7.2440796 7.1023636q3.6220703 -3.5511818 7.24411 -7.1023636l0 0c4.0007935 -3.9225254 4.0007935 -10.282198 0 -14.204723l0 0c-4.0007935 -3.9225264 -10.487396 -3.9225264 -14.48819 0z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m297.3647 7.1233573l0 0c-4.0007935 3.922526 -4.0007935 10.282198 0 14.204723q3.6220398 3.5511818 7.2440796 7.1023636q3.6220703 -3.5511818 7.24411 -7.1023636l0 0c4.0007935 -3.9225254 4.0007935 -10.282198 0 -14.204723l0 0c-4.0007935 -3.9225264 -10.487396 -3.9225264 -14.48819 0z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#ff0000"
+                        d="m274.7912 43.762527l0 0c4.0007935 3.9225235 10.487366 3.9225235 14.48819 0q3.6220398 -3.5511818 7.2440796 -7.1023636q-3.6220398 -3.5511818 -7.2440796 -7.1023617l0 0c-4.000824 -3.9225273 -10.487396 -3.9225273 -14.48819 0l0 0c-4.000824 3.9225254 -4.000824 10.282198 0 14.204725z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m274.7912 43.762527l0 0c4.0007935 3.9225235 10.487366 3.9225235 14.48819 0q3.6220398 -3.5511818 7.2440796 -7.1023636q-3.6220398 -3.5511818 -7.2440796 -7.1023617l0 0c-4.000824 -3.9225273 -10.487396 -3.9225273 -14.48819 0l0 0c-4.000824 3.9225254 -4.000824 10.282198 0 14.204725z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#ff0000"
+                        d="m311.29803 66.50933l0 0c4.0007935 -3.9225235 4.0007935 -10.282196 0 -14.204723q-3.6220398 -3.5511818 -7.2440796 -7.10236q-3.6220703 3.551178 -7.24411 7.10236l0 0c-4.0007935 3.9225273 -4.0007935 10.2822 0 14.204723l0 0c4.000824 3.9225311 10.487396 3.9225311 14.48819 0z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m311.29803 66.50933l0 0c4.0007935 -3.9225235 4.0007935 -10.282196 0 -14.204723q-3.6220398 -3.5511818 -7.2440796 -7.10236q-3.6220703 3.551178 -7.24411 7.10236l0 0c-4.0007935 3.9225273 -4.0007935 10.2822 0 14.204723l0 0c4.000824 3.9225311 10.487396 3.9225311 14.48819 0z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#ff0000"
+                        d="m333.87152 29.870163l0 0c-4.0007935 -3.9225254 -10.487366 -3.9225254 -14.48819 0q-3.6220398 3.5511818 -7.2440796 7.1023636q3.6220398 3.5511818 7.2440796 7.10236l0 0c4.000824 3.9225273 10.487396 3.9225273 14.48819 0l0 0c4.000824 -3.9225235 4.000824 -10.282196 0 -14.204723z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m333.87152 29.870163l0 0c-4.0007935 -3.9225254 -10.487366 -3.9225254 -14.48819 0q-3.6220398 3.5511818 -7.2440796 7.1023636q3.6220398 3.5511818 7.2440796 7.10236l0 0c4.000824 3.9225273 10.487396 3.9225273 14.48819 0l0 0c4.000824 -3.9225235 4.000824 -10.282196 0 -14.204723z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" fill="#ffff00"
+                        d="m316.04218 37.07362l0 0c0 -6.531746 -5.35849 -11.826773 -11.968506 -11.826773l0 0c-3.1742249 0 -6.2184753 1.2460327 -8.463013 3.4639816c-2.2445068 2.2179508 -3.5054932 5.226137 -3.5054932 8.362791l0 0c0 6.531746 5.35849 11.826771 11.968506 11.826771l0 0c6.610016 0 11.968506 -5.295025 11.968506 -11.826771z"
+                        fill-rule="evenodd" />
+                    <path class="flower" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m316.04218 37.07362l0 0c0 -6.531746 -5.35849 -11.826773 -11.968506 -11.826773l0 0c-3.1742249 0 -6.2184753 1.2460327 -8.463013 3.4639816c-2.2445068 2.2179508 -3.5054932 5.226137 -3.5054932 8.362791l0 0c0 6.531746 5.35849 11.826771 11.968506 11.826771l0 0c6.610016 0 11.968506 -5.295025 11.968506 -11.826771z"
+                        fill-rule="evenodd" />
+                    <path class="leaf1" class="hidden-svg" fill="#b6d7a8"
+                        d="m59.110237 92.708664l0 0c0 5.2271347 -4.314987 9.464561 -9.6377945 9.464561q-4.818901 0 -9.637798 0q0 -4.732277 0 -9.464561l0 0c0 -5.2271347 4.314991 -9.464569 9.637798 -9.464569l0 0c5.3228073 0 9.6377945 4.2374344 9.6377945 9.464569z"
+                        fill-rule="evenodd" />
+                    <path class="leaf1" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m59.110237 92.708664l0 0c0 5.2271347 -4.314987 9.464561 -9.6377945 9.464561q-4.818901 0 -9.637798 0q0 -4.732277 0 -9.464561l0 0c0 -5.2271347 4.314991 -9.464569 9.637798 -9.464569l0 0c5.3228073 0 9.6377945 4.2374344 9.6377945 9.464569z"
+                        fill-rule="evenodd" />
+                    <path class="leaf1" class="hidden-svg" fill="#000000" fill-opacity="0.0"
+                        d="m44.514435 98.8428c2.2454643 -3.5795822 6.212303 -5.2049637 8.063183 -9.134132"
+                        fill-rule="evenodd" />
+                    <path class="leaf1" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m44.514435 98.8428c2.2454643 -3.5795822 6.212303 -5.2049637 8.063183 -9.134132"
+                        fill-rule="evenodd" />
+                    <path class="leaf2" class="hidden-svg" fill="#b6d7a8"
+                        d="m121.47244 110.34646l0 0c-5.2271347 0 -9.464569 -4.314987 -9.464569 -9.6377945q0 -4.818901 0 -9.6377945q4.7322845 0 9.464569 0l0 0c5.2271347 0 9.464569 4.314987 9.464569 9.6377945l0 0c0 5.3228073 -4.2374344 9.6377945 -9.464569 9.6377945z"
+                        fill-rule="evenodd" />
+                    <path class="leaf2" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m121.47244 110.34646l0 0c-5.2271347 0 -9.464569 -4.314987 -9.464569 -9.6377945q0 -4.818901 0 -9.6377945q4.7322845 0 9.464569 0l0 0c5.2271347 0 9.464569 4.314987 9.464569 9.6377945l0 0c0 5.3228073 -4.2374344 9.6377945 -9.464569 9.6377945z"
+                        fill-rule="evenodd" />
+                    <path class="leaf2" class="hidden-svg" fill="#000000" fill-opacity="0.0"
+                        d="m115.33831 95.750656c3.5795822 2.2454681 5.2049637 6.212303 9.134132 8.063179"
+                        fill-rule="evenodd" />
+                    <path class="leaf2" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m115.33831 95.750656c3.5795822 2.2454681 5.2049637 6.212303 9.134132 8.063179"
+                        fill-rule="evenodd" />
+                    <path class="leaf3" class="hidden-svg" fill="#b6d7a8"
+                        d="m323.11023 84.708664l0 0c0 5.2271347 -4.314972 9.464561 -9.637787 9.464561q-4.8189087 0 -9.637787 0q0 -4.732277 0 -9.464561l0 0c0 -5.2271347 4.314972 -9.464569 9.637787 -9.464569l0 0c5.322815 0 9.637787 4.2374344 9.637787 9.464569z"
+                        fill-rule="evenodd" />
+                    <path class="leaf3" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m323.11023 84.708664l0 0c0 5.2271347 -4.314972 9.464561 -9.637787 9.464561q-4.8189087 0 -9.637787 0q0 -4.732277 0 -9.464561l0 0c0 -5.2271347 4.314972 -9.464569 9.637787 -9.464569l0 0c5.322815 0 9.637787 4.2374344 9.637787 9.464569z"
+                        fill-rule="evenodd" />
+                    <path class="leaf3" class="hidden-svg" fill="#000000" fill-opacity="0.0"
+                        d="m308.51443 90.8428c2.245453 -3.5795822 6.212311 -5.2049637 8.063171 -9.134132"
+                        fill-rule="evenodd" />
+                    <path class="leaf3" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m308.51443 90.8428c2.245453 -3.5795822 6.212311 -5.2049637 8.063171 -9.134132"
+                        fill-rule="evenodd" />
+                    <path class="leaf4" class="hidden-svg" fill="#b6d7a8"
+                        d="m242.17346 81.31833l0 0c5.227127 0 9.464569 4.314987 9.464569 9.6377945q0 4.8188934 0 9.6377945q-4.7322845 0 -9.464569 0l0 0c-5.2271423 0 -9.464569 -4.314987 -9.464569 -9.6377945l0 0c0 -5.3228073 4.2374268 -9.6377945 9.464569 -9.6377945z"
+                        fill-rule="evenodd" />
+                    <path class="leaf4" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m242.17346 81.31833l0 0c5.227127 0 9.464569 4.314987 9.464569 9.6377945q0 4.8188934 0 9.6377945q-4.7322845 0 -9.464569 0l0 0c-5.2271423 0 -9.464569 -4.314987 -9.464569 -9.6377945l0 0c0 -5.3228073 4.2374268 -9.6377945 9.464569 -9.6377945z"
+                        fill-rule="evenodd" />
+                    <path class="leaf4" class="hidden-svg" fill="#000000" fill-opacity="0.0"
+                        d="m248.30759 95.91412c-3.5795746 -2.2454605 -5.204956 -6.212303 -9.134125 -8.063179"
+                        fill-rule="evenodd" />
+                    <path class="leaf4" class="hidden-svg" stroke="#000000" stroke-width="1.0" stroke-linejoin="round"
+                        stroke-linecap="butt"
+                        d="m248.30759 95.91412c-3.5795746 -2.2454605 -5.204956 -6.212303 -9.134125 -8.063179"
                         fill-rule="evenodd" />
                 </g>
             </svg>
         </header>
         <sidebar>Previous Searches</sidebar>
-        <main>Main area (Map, Soil Info, Plant Pic/Info)</main>
+        <main>{{{body}}}</main>
     </section>
 
-    <script src="../../public/assets/js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARfhfpO7n32j5daaW3yins92N5V5OiREI" async
+        defer></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
