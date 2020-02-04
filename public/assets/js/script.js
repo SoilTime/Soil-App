@@ -5,6 +5,7 @@
 $(document).ready(function () {
 
     $("#map").hide();
+    display_last_searched();
     $("#submit").on("click", coordinateAddress);
 
     function coordinateAddress() {
@@ -14,6 +15,8 @@ $(document).ready(function () {
         console.log("codeAddress -->" + address);
         geocoder.geocode({ 'address': address }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
+                console.log(window);
+                saveData(address);
                 var lat_new = results[0].geometry.location.lat().toFixed(2);
                 var lng_new = results[0].geometry.location.lng().toFixed(2);
                 var obj = { lat: parseFloat(lat_new), lng: parseFloat(lng_new) };
@@ -92,6 +95,37 @@ $(document).ready(function () {
             }
         );
     };
+    /////////////////////////////////////////////////////////////
+
+    function saveData(item) {
+        var array1 = window.localStorage.getItem("city_history");
+
+        if (array1 == null) {
+            array1 = [item];
+        } else {
+            array1 = JSON.parse(array1);
+            if (array1.indexOf(item) === -1) {
+                array1.push(item);
+            }
+        }
+        window.localStorage.setItem("city_history", JSON.stringify(array1));
+    }
+
+    function display_last_searched() {
+        var array_history = JSON.parse(window.localStorage.getItem("city_history"));
+        if (array_history === null) {
+            return;
+        }
+        $('sidebar').empty();
+        console.log(array_history.length);
+        for (var i = 0; i < array_history.length; i++) {
+            var newElement = $("<p>").attr("id", "side_search");
+            newElement.text(array_history[i]);
+            $('sidebar').append(newElement)
+        }
+
+    }
+    /////////////////////////////////////////////////////////////////
     function sendCoord(data) {
         $.ajax({
             url: "#",
