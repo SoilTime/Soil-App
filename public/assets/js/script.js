@@ -95,11 +95,15 @@ $(document).ready(function () {
     function sendCoord(data) {
         $.ajax({
             url: "#",
-            method: "GET",
+            method: "POST",
             data: data
         }).then(function (response) {
-            console.log("SENT")
+            console.log("SENT TO DATABASE")
             console.log(data)
+
         })
+        // $.post("/api/coordinates", data, function(){
+        //     console.log("sent")
+        // })
     };
 })

@@ -21,15 +21,15 @@ module.exports = function (router) {
 
    
 // Route to capture the search input by user
-    router.post("/api/:search", function (req, res) {
-        console.log(req.body);
+    // router.post("/api/:search", function (req, res) {
+    //     console.log(req.body);
 
-        db.Student.create(req.body)
-            .then(function (data) {
-                // console.log("added in database");
-                res.json(data)
-            })
-    });
+    //     db.Student.create(req.body)
+    //         .then(function (data) {
+    //             // console.log("added in database");
+    //             res.json(data)
+    //         })
+    // });
 
 }
 
@@ -47,4 +47,8 @@ router.get('/trefle/:plant', function (req, res) {
     res.render('soil', {plant: data});
     });
     
+router.get("/api/coordinates", function(req,res){
+    console.log(req.body)
+})
     
+// module.exports = router;
