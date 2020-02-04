@@ -48,7 +48,7 @@
   font-family: 'Indie Flower', cursive;
   font-size: 20px;
   font-weight: bold;
-  background-color: rgb(85, 177, 85);
+  background-color: #b6d7a8;
 }
 #submit:hover{
   background-color: green;
@@ -142,11 +142,6 @@
   opacity: 0;
 }
 
-#map {
-  height: 400px;
-  width: 400px;
-}
-
 @keyframes grow {
   100% {opacity: 1}
   from {
@@ -156,9 +151,6 @@
     transform: scale(1);
   }
 }
-
-
-
 
 /* The Modal (background) */
 .modal {
@@ -177,11 +169,12 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #b6d7a8;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  font-size: 30px;
 }
 
 /* The Close Button */
@@ -197,4 +190,58 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+#map {
+  height: 300px;
+  width: 300px;
+  float: left;
+  margin: 20px 0px 0px 20px;
+}
+
+#soil{
+  height: 300px;
+  width: 730px;
+  background-color: #b6d7a8;
+  color: black;
+  visibility: hidden;
+  float: right;
+  margin: 20px 20px 0px 0px;
+  font-size: 20px;
+  transition: background-color 1s;
+  box-sizing: border-box; 
+  transition: border 1s;
+}
+#plant-pic {
+  height: 300px;
+  width: 300px;
+  background-color: #b6d7a8;
+  color: black;
+  float: left;
+  visibility: hidden;
+  margin: 20px 0px 0px 20px;
+  font-size: 20px;
+  transition: background-color 1s;
+  box-sizing: border-box; 
+  transition: border 1s;
+}
+#plant-info{
+  height: 300px;
+  width: 730px;
+  background-color: #b6d7a8;
+  color: black;
+  visibility: hidden;
+  float: right;
+  margin: 20px 20px 0px 0px;
+  font-size: 20px;
+  transition: background-color 1s;
+  box-sizing: border-box; 
+  transition: border 1s;
+}
+
+#soil:hover, #plant-pic:hover, #plant-info:hover{
+background-color: green;
+border: white solid 3px;
+
+
 }
