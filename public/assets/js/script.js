@@ -1,4 +1,5 @@
 
+
 $(document).ready(function () {
 
     $("#map").hide();
@@ -9,6 +10,7 @@ $(document).ready(function () {
 
 
     function side_coordinate() {
+        display_last_searched();
         geocoder = new google.maps.Geocoder();
         // console.log($(this).data("value"));
 
@@ -20,7 +22,7 @@ $(document).ready(function () {
             if (status == google.maps.GeocoderStatus.OK) {
 
                 // var obj = { lat: parseFloat($(this).data("lat")), lng: parseFloat($(this).data("lng")), name: address };
-                saveData(obj);
+                // saveData(obj);
                 // console.log(obj);
                 initMap(obj);
                 sendCoord(obj)
@@ -55,12 +57,11 @@ $(document).ready(function () {
 
     }
 
-
-
     function coordinateAddress() {
+        display_last_searched();
         geocoder = new google.maps.Geocoder();
-        var address = $("#city-search").val();
-        // console.log("codeAddress -->" + address);
+        var city = $("#city-search").val();
+        var address = city.charAt(0).toUpperCase() + city.slice(1);
         geocoder.geocode({ 'address': address }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
