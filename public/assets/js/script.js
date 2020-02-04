@@ -98,7 +98,7 @@ $(document).ready(function () {
             method: "GET",
             data: data
         }).then(function (response) {
-            console.log("SENT")
+            console.log("SENT TO DATABASE")
             console.log(data)
         })
     };
