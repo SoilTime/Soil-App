@@ -94,7 +94,7 @@ $(document).ready(function () {
     };
     function sendCoord(data) {
         $.ajax({
-            url: "#",
+            url: "/api/coordinates",
             method: "POST",
             data: data
         }).then(function (response) {

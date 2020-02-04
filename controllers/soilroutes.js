@@ -30,7 +30,21 @@ module.exports = function (router) {
     //             res.json(data)
     //         })
     // });
-
+router.post("/api/coordinates", function(req,res){
+    console.log(req.body)
+    db.Soil.findAll({
+       $and: {
+           Latitude: {
+               $like: req.body.lat
+           },
+           Longitude: {
+               $like: req.body.lng
+           }
+       }
+    })
+    console.log(res)
+})
+    
 }
 
 
@@ -47,8 +61,5 @@ router.get('/trefle/:plant', function (req, res) {
     res.render('soil', {plant: data});
     });
     
-router.get("/api/coordinates", function(req,res){
-    console.log(req.body)
-})
-    
+
 // module.exports = router;
