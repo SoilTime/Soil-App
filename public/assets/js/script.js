@@ -102,4 +102,12 @@ $(document).ready(function () {
             console.log(data)
         })
     };
+    $("#submit").on("click", showCards)
+    function showCards() {
+        $("#soil").css("visibility", "visible");
+        $("#plant-pic").css("visibility", "visible");
+        $("#plant-info").css("visibility", "visible")
+    }
+
+
 })
