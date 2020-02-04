@@ -44,6 +44,7 @@ router.post("/api/coordinates", function(req,res){
             Region: "North Carolina"
         }
     }).then(function(result){
+        res.json(result)
         console.log(result[0])
         var queryTerm = result[0].Species
         queryTerm2 = queryTerm.toLowerCase()

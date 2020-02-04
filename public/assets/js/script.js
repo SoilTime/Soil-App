@@ -100,7 +100,7 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log("SENT TO DATABASE")
             console.log(data)
-
+            console.log(response[0].Species)
         })
         // $.post("/api/coordinates", data, function(){
         //     console.log("sent")
