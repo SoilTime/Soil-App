@@ -181,12 +181,19 @@ $(document).ready(function () {
     /////////////////////////////////////////////////////////////////
     function sendCoord(data) {
         $.ajax({
-            url: "#",
-            method: "GET",
+            url: "/api/coordinates",
+            method: "POST",
             data: data
         }).then(function (response) {
             console.log("SENT TO DATABASE")
-            console.log(data)
+            console.log(data);
+            console.log(response[0]);
+            console.log(response[0].Species);
+            $("#plant").text("Plant name: " + response[0].Species);
+            $("#biome").text("Biome: " + response[0].Biome);
+            $("#ecosystem").text("Ecosystem: " + response[0].Ecosystem_type);
+            $("#soil_name").text("Soil Type: " + response[0].Soil_type);
+            $("#soil_type").text("Soil Drainage: " + response[0].Soil_drainage);
         })
     };
     $("#submit").on("click", showCards)
@@ -203,3 +210,6 @@ $(document).ready(function () {
         $("#plant-info").css("visibility", "visible")
     }
 })
+
+
+/////////////////////////////////////////////////////////////////////
