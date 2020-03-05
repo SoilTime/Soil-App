@@ -3,7 +3,7 @@ module.exports = function (sequelize, DataTypes) {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            autIncrement:true,
+            autIncrement: true,
             primaryKey: true
         },
         Country: {
@@ -39,7 +39,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         Ecosystem_type: {
-            type: DataTypes.STRING,   
+            type: DataTypes.STRING,
         },
         Ecosystem_state: {
             type: DataTypes.STRING,

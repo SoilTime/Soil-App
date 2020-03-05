@@ -17,7 +17,7 @@ We added some styling to the page using basic CSS properties and also added some
 
 ## Third party APIs and Database
 
-We used Google API to display the map on the page and also use the location to query the database. The database would return the type of soil in location that user enters and also the plant(s) suitable for that type if soil. We then use the plant from the database to query the Wikipedia API to get more information like the picture of the plant and a brief summary of what the plant can be used for.
+We used Google API to display the map on the page and also used the location to query the database. The database would return the type of soil you would find in the user's entered location and also the plant(s) suitable for that type if soil. We then use the plant from the database to query the Wikipedia API to get more information like the picture of the plant and a brief summary of what the plant can be used for.
 
  
 Link to the live website can be found in the contact section.

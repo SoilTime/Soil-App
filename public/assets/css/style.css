@@ -48,7 +48,7 @@
   font-family: 'Indie Flower', cursive;
   font-size: 20px;
   font-weight: bold;
-  background-color: rgb(85, 177, 85);
+  background-color: #b6d7a8;
 }
 #submit:hover{
   background-color: green;
@@ -142,11 +142,6 @@
   opacity: 0;
 }
 
-#map {
-  height: 400px;
-  width: 400px;
-}
-
 @keyframes grow {
   100% {opacity: 1}
   from {
@@ -156,9 +151,6 @@
     transform: scale(1);
   }
 }
-
-
-
 
 /* The Modal (background) */
 .modal {
@@ -177,11 +169,12 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #b6d7a8;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  font-size: 30px;
 }
 
 /* The Close Button */
@@ -197,4 +190,110 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+#map {
+  height: 300px;
+  width: 300px;
+  float: left;
+  margin: 20px 0px 0px 20px;
+}
+
+#soil{
+  height: 300px;
+  width: 730px;
+  background-color: #b6d7a8;
+  color: black;
+  visibility: hidden;
+  float: right;
+  margin: 20px 20px 0px 0px;
+  font-size: 20px;
+  transition: background-color 1s;
+  box-sizing: border-box; 
+  transition: border 1s;
+  opacity: 0.75;
+}
+#plant-pic {
+  height: 300px;
+  width: 300px;
+  background-color: #b6d7a8;
+  color: black;
+  float: left;
+  visibility: hidden;
+  margin: 20px 0px 0px 20px;
+  font-size: 20px;
+  transition: background-color 1s;
+  box-sizing: border-box; 
+  transition: border 1s;
+  opacity: 0.75;
+}
+#plant-info{
+  height: 300px;
+  width: 730px;
+  background-color: #b6d7a8;
+  color: black;
+  visibility: hidden;
+  float: right;
+  margin: 20px 20px 0px 0px;
+  font-size: 20px;
+  transition: background-color 1s;
+  box-sizing: border-box; 
+  transition: border 1s;
+  opacity: 0.75;
+}
+
+#soil:hover, #plant-pic:hover, #plant-info:hover{
+opacity: 1;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #6aa84f;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.submit_side{
+  width: 100%;
+  height: 30px;
+  background-color: #6aa84f;
+  color: #f1f1f1;
 }
