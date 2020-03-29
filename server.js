@@ -2,6 +2,8 @@ const express = require("express");
 var db = require("./models")
 var soilController = require("./controllers/soilroutes")
 var app = express();
+// var compression = require('compression')
+// app.use(compression())
 var PORT = process.env.PORT || 8086;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
