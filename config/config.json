@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "soil_db",
-    "host": "127.0.0.1",
+    "username": "bq3g9i83h218saoe",
+    "password": "ksrsf3ekeq8wliz9",
+    "database": "s233ennlh6tl6zc2",
+    "host": "v02yrnuhptcod7dk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "port": 3306
   },
