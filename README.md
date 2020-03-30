@@ -37,16 +37,16 @@ Link to the live website can be found in the contact section.
 * Josh Segel (segeljosh@gmail.com)
 * Segun Alesinloye (segunalesh@gmail.com)
 * Project link: 
-* Github repo link: 
+* Github repo link: https://github.com/SoilTime/Soil-App
 
 ## Technologies Used
-* JQuerry
+* jQuery
 * Sequelize
 * Express
 * Express Handlebars
 * CSS Grid
 * Google Icons
 * Wikipedia API
-* Google Sketch
+* Google Drawings
 * SVG Animations
-* Mysql
+* MySQL
